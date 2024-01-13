@@ -8,7 +8,58 @@
   <body>
     <h1>Exploring JS ExicutionContext.js</h1>
     <h3>How JS runs your code</h3>
-    <p></p>
+    <p>
+      Interpreter: Amader lekha human readable code instruction er protiti
+      equivalent machine instruction browser engine e lekha ache. Interpreter
+      line by line exicute kore. Mane protom line interprete kore, tarpor abar
+      code fire eshe ditio line browser engine e niye zay ebong engine machine
+      code e convert kore. Interpretation process onek slow chilo, kintu easy to
+      debug.
+    </p>
+    <p>
+      Compilation: Compilation e pur file er code eksathe browser engine machine
+      code e convert kore. Compilation e line by line process chilo na, ejonno
+      compilation onek fast chilo. Kintu code er moddhye khane error hole
+      compilation bondo takto na, compilation complete hoye zeto, ejonno kun
+      line e error hoyeche ta khuje ber kora one kothin chilo. Thik e karonei
+      Compilation process hard to debug chilo.
+    </p>
+    <p>
+      JIT-Compiler: JIT: Interprete kore+ Compiler: code ke machine code e
+      convert kore. Zokhon kuno fuction call hoy tokhon just in time er moddhye
+      oi function er code machine code e convert hoy ebong run hoy.
+    </p>
+    <div>
+      <h1>Exicution Context:Loading phase</h1>
+      <p>
+        Shurutei zokhon kuno code e thake na, tokhon JS engine 'JS exicution
+        context' name ekti object create kore. Ei object er moddhye :
+      </p>
+      <p>window: namok ekti global object thake.</p>
+      <p>this: diye sei global/window object ke point kora hoy</p>
+      <p>
+        variable object: code er ze kuno variable er jonno variable object
+        create hoy
+      </p>
+      <p>variable object er jonno scope chaining toire hoy</p>
+      <h3>exicution context er creation phase er image:</h3>
+      <p>**loading/creation phase variable assign hoy na</p>
+      <p>
+        **loading/creation phase e kuno function exicute hoy na, tar reference
+        allocated hoy
+      </p>
+      <img src="./ExicutionContext.png" alt="" srcset="" />
+    </div>
+    <div>
+      <h1>Exicution Context:Exicution phase</h1>
+      <h3>exicution context er exicution phase er image:</h3>
+      <p>**exicution phase variable assign hoy</p>
+      <p>
+        ** phase e kuno function takle sei reference onuzaye, function exicution
+        context toire hoy. Function exicution context er abar duita phase thake.
+      </p>
+      <img src="./Screenshot (8).png" alt="" srcset="" />
+    </div>
     <script src="ExicutionContext.js"></script>
   </body>
 </html>
