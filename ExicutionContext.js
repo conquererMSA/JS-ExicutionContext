@@ -36,3 +36,18 @@
 //     var msg='Hello world'
 // }
 // console.log(msg) //referenceError
+
+//Closure execution context 
+var sum=0
+function doSum(a){
+    // closure eecution context er creation phase thake na, direct execution phase e chole zay.
+    return function(b){
+        return a+b
+    }
+}
+
+var temp=doSum(2)
+var sum=sum+temp(3)
+var sum=sum+temp(5)
+console.log(sum);
+
